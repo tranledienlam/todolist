@@ -1,0 +1,8 @@
+<!-- Hover added -->
+<div class="grid-container container">
+    <% for( let index = 0; index < lists.length; index++ ) { %>
+        <% if (lists[index].items.length > 0) { %>
+            <a class="btn grid-item" href="/<%= lists[index].name %>" role="button"><%= lists[index].name %></a>
+        <% } %>
+    <% } %>
+</div>

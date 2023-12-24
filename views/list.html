@@ -1,0 +1,52 @@
+<%- include('./header.html') %>
+    <div class="box" id="heading">
+      <h1><%= listTitle %></h1>
+    </div>
+    <div class="box">
+      <% if (items) { %>
+        <% items.forEach((item, index )=> { %>
+          <!-- <div class="item">
+            <div type="button" style="display: block; width: 100%;">
+              <input type="checkbox" name="" id="">
+              <span><%= index+1 %>. <%= item.name %></span>
+            </div>
+          </div> -->
+          <div class="item">
+            <form action="/<%= item._id %>/check" method="post" style="display: flex; flex-grow: 1;">
+              <input type="hidden" name="title" value=<%= listTitle %> >
+              <input type="checkbox" 
+                onChange="this.form.submit()" 
+                <% if (item.checked) { %>checked<% } %>
+                >
+              <p type="button" class="buttonItem"><%= index+1 %>. <%= item.name %></p>
+            </form>
+            <form action="/<%= item._id %>/delete" method="post" >
+              <input type="hidden" name="title" value=<%= listTitle %> >
+              <button type="submit" class= "buttonDelete">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#A8A196" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        <% }) %>
+       
+      <% } %>
+      
+      <% if (listTitle == 'Today') { %>
+        <form class="item" action="/" method="post">
+      <% } else { %>
+        <form class="item" action="/<%= listTitle %>" method="post">
+      <% } %>
+         
+        <div class="mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Type your work" autocomplete="off"/>
+        </div>
+        <button class="button" type="submit">+</button>
+      </form>
+    </div>
+    <% if (listTitle == 'Today') { %>
+     <%- include('listDate.html') %>
+     
+    <% } %>
+<%- include('footer.html') %>
