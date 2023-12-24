@@ -41,7 +41,7 @@
 
 ## Đóng Góp
 
-Nếu bạn muốn đóng góp vào dự án, hãy mở một Pull Request hoặc báo cáo lỗi tại [https://github.com/your-username/todo-list-project/issues](https://github.com/your-username/todo-list-project/issues).
+Nếu bạn muốn đóng góp vào dự án, hãy mở một Pull Request hoặc báo cáo lỗi tại [https://github.com/tranledienlam/todolist/issues](https://github.com/tranledienlam/todolist/issues).
 
 ## Giấy Phép
 
