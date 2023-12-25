@@ -13,8 +13,8 @@
 1. **Clone dự án từ GitHub:**
 
     ```bash
-    git clone https://github.com/your-username/todo-list-project.git
-    cd todo-list-project
+    git clone https://github.com/tranledienlam/todolist.git
+    cd todolist
     ```
 
 2. **Cài đặt các gói phụ thuộc:**
