@@ -90,7 +90,7 @@ app.route("/:customListName")
         } else {
             // create a new list item
             try {
-                if (customListName !== 'favicon.ico') {
+                if (!['favicon.ico', 'robot.txt'].includes(customListName)) {
                     const newList = new List({
                         name: customListName,
                         dateby: new Date()
