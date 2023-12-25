@@ -28,7 +28,7 @@
     Tạo một file `.env` trong thư mục gốc và cấu hình các biến môi trường như sau:
 
     ```env
-    DATABASE_URL=mongodb://localhost:27017/todo-list-db
+    DATABASE_URL=mongodb://localhost:27017/todolistDB
     ```
 
 4. **Chạy ứng dụng:**
