@@ -48,7 +48,7 @@ app.route("/")
         let isToday
         const today = moment().format('YYYY-MM-DD');
         try {
-            const lists = await List.find({}).sort({dateby: -1}).limit(1)
+            const lists = await List.find({}).sort({dateby: -1})
 
             if (lists.length > 0) {
                 const dateList = moment(lists[0].dateby).format('YYYY-MM-DD');
